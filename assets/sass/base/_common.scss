@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+// 1.2. Clear Fix
+// ========================== 
+
+.cf:before,
+.cf:after {
+	display: table;
+	content: " ";
+}
+	
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+	
+// for all
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+	
+a { 
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	-webkit-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease; 
+}
+	
+li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+//common styling
+.section-heading {
+  color: $primary-color;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.section-subheading  {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.process-title {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

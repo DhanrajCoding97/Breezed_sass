@@ -1,12 +1,13 @@
+@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
+
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -29,9 +30,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html {
+html { 
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: scroll; 
 }
 
 *,
@@ -41,14 +42,12 @@ html {
 }
 
 /* Align radios and text inputs with their label */
-input[type=radio] {
-  vertical-align: text-bottom;
-}
+input[type='radio'] { vertical-align: text-bottom; }
 
 /* Hand cursor on clickable input elements */
 label,
-input[type=button],
-input[type=submit],
+input[type='button'],
+input[type='submit'],
 button {
   cursor: pointer;
 }
@@ -59,9 +58,7 @@ strong {
   font-size: inherit;
 }
 
-em {
-  font-style: italic;
-}
+em { font-style: italic; }
 
 img {
   width: 100%;
@@ -78,69 +75,7 @@ sup {
   line-height: 0;
 }
 
-sup {
-  top: -0.7em;
-}
+sup { top: -.7em; }
+sub { bottom: -.25em; }
 
-sub {
-  bottom: -0.25em;
-}
-
-b {
-  font-weight: 900;
-}
-
-.cf:before,
-.cf:after {
-  display: table;
-  content: " ";
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
-body {
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-}
-
-a {
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.section-heading {
-  color: #5fb759;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-.section-subheading {
-  margin-top: 20px;
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.process-title {
-  margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/*# sourceMappingURL=style.css.map */
+b { font-weight: 900; }
