@@ -1,0 +1,44 @@
+.about-us  {
+  padding-top: 120px;
+
+  .wrapper {
+    @include flexbox();
+    border-bottom: 5px solid $border-color;
+
+    @include breakpoints(ipad-pro) { @include flex-direction(column); }
+    & > * { flex: 1; }
+
+    @at-root
+    .qualities {
+      @include flexbox();
+      @include flex-wrap(wrap);
+
+      li { 
+        @include flex-basis(50%);
+
+        @include breakpoints(tablet) { @include flex-basis(100%); }
+
+        &::before { content: url('assets/images/service-item-01.png');}
+      }
+    }
+
+    @at-root
+    .quality-txt{
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    @at-root
+    .about-us-content {
+
+      &:first-of-type {margin-top: 47px;}
+
+      margin-bottom: 27px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+  }
+}
