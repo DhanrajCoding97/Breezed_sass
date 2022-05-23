@@ -18,3 +18,42 @@
   text-indent: $indent;
   transition: all .3s ease-in-out;
 }
+
+// banner cta
+.banner-read-more-cta {
+  @include banner-cta(transparent, $white) { 
+    margin-right: 2.1%;
+    border: 2px solid $white; 
+  };
+
+  &:hover { 
+    @include hover-effects() {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+}
+
+.banner-take-action-cta { 
+  @include banner-cta($white, $primary-color); 
+
+  &:hover { @include hover-effects() {
+    background-color: $primary-color;
+    color: $white;
+  }}
+}
+
+//go down btn
+.go-down-btn {
+  @include icon-box();
+  display: inline-block;
+  background-color: $primary-color;
+  color: $white;
+  text-indent: $indent;
+
+  &::after {
+    @include font-icons("\f063", $white, 20px) {
+      padding: 20px 38% 0 0;
+    }
+  }
+}

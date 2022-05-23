@@ -1,0 +1,52 @@
+.banner {
+  .wrapper { 
+    width: 100%;
+    
+    @at-root
+    .slider-item {
+      display: none;
+      &:first-child { display: block;}
+      height: 95vh;
+      position: relative;
+
+      @at-root 
+      .banner-figure { height: 100%; }
+
+      @at-root 
+      .banner-content { 
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @at-root
+        .banner-title {
+          margin-bottom: 25px;
+          color: $white;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        } 
+
+        @at-root
+        .banner-subtitle {
+          margin-bottom: 50px;
+          color: $white;
+          font-size: 36px;
+          font-weight: 200;
+          letter-spacing: 2.5px;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    @at-root
+    .go-down-btn-container {
+      position: absolute;
+      bottom: 2px;
+      left: 48%;
+    }
+  }
+}
