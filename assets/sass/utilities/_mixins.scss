@@ -97,12 +97,24 @@
   text-indent: 0;
 }
 
-@mixin icon-box() {
-  height: 50px;
-  width: 50px;
-  border: 1px solid $border-footer-color;
+@mixin icon-box($width, $height) {
+  width: $width;
+  height: $height;
   border-radius: 50px;
   text-align: center;
+}
+
+//mixin for banner cta
+@mixin banner-cta($bg, $color) {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: $bg;
+  color: $color;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @content;
 }
 
 // mixin to give hover effect only on desktops
