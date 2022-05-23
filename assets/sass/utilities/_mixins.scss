@@ -87,12 +87,13 @@
 @mixin font-content($content) { content: $content; }
 
 //icons
-@mixin font-icons($color, $size,) {
+@mixin font-icons($content, $color, $size) {
+  content: $content;
   @content;
   color: $color;
   font-family: "fontAwesome";
   font-size: $size;
-  float: left;
+  float: right;
   text-indent: 0;
 }
 
@@ -138,6 +139,10 @@
   transform: $translate rotate(#{$rotate}deg);
 }
 
+//styles for larger devices
+@mixin desktops() {
+  @media screen and (min-width: 768px) { @content;}
+}
 
 //mixin for media queries
 @mixin breakpoints($device) {

@@ -52,3 +52,21 @@ li {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+//body overflow hidden hamburger menu open
+.hidden {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// for wrapper
+.wrapper {
+	max-width: 1360px;
+	width: 85.2%;
+	margin: 0 auto;
+}

@@ -1,4 +1,9 @@
 @import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'components/buttons';
 
 @import 'base/reset';
 @import 'base/common';
+
+// layouts
+@import 'layouts/header';

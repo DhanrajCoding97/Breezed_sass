@@ -1,0 +1,20 @@
+//hamburger
+.hamburger { 
+  @include desktops() { display: none; }
+  cursor: pointer;
+  
+  &.active { display: block; }
+  &.active .bar:nth-child(2) { opacity: 0;}
+  &.active .bar:nth-child(1) { @include transformRotate(45, translate(0, 8px)); }
+  &.active .bar:nth-child(3) { @include transformRotate(-45, translate(0, -8px)); }
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  display: block;
+  background-color: $white;
+  text-indent: $indent;
+  transition: all .3s ease-in-out;
+}
