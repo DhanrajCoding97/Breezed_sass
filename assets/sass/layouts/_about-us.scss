@@ -14,16 +14,30 @@
       @include flex-wrap(wrap);
 
       li { 
+        @include flexbox();
+        @include align-items(center);
         @include flex-basis(50%);
 
-        @include breakpoints(tablet) { @include flex-basis(100%); }
+        &:first-child { 
+          padding-bottom: 15px;
+        }
+        &:nth-child(2){ padding-bottom: 15px}
 
-        &::before { content: url('assets/images/service-item-01.png');}
+        @include breakpoints(tablet) { 
+          @include flex-basis(100%); 
+          padding-bottom: 15px;
+        }
+        
       }
+    }
+
+    .left-content {
+      .section-subheading { padding-bottom: 41px; }
     }
 
     @at-root
     .quality-txt{
+      padding-left: 5%;
       font-size: 15px;
       font-weight: 700;
       text-transform: uppercase;
@@ -35,6 +49,7 @@
       &:first-of-type {margin-top: 47px;}
 
       margin-bottom: 27px;
+      color: $txt-color;
       font-size: 16px;
       line-height: 1.7;
     }
