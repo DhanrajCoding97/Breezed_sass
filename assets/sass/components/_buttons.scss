@@ -51,11 +51,15 @@
   color: $white;
   text-indent: $indent;
 
+  &:hover { @include hover-effects() { background-color: $black;} }
+
   &::after {
     @include font-icons("\f063", $white, 20px) {
       padding: 20px 38% 0 0;
     }
   }
+
+  &:hover::after { @include hover-effects() { color: $primary-color; }}
 }
 
 //about-us-cta 
