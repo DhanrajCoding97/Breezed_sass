@@ -1,0 +1,54 @@
+.our-projects {
+  padding: 115px 0 76px;
+  .wrapper {
+    @include flexbox();
+
+    @include breakpoints(ipad-pro) { @include flex-direction(column); }
+
+    .left-content { 
+      flex: 1;
+
+      @at-root
+      .filter-image-links {
+        padding-top: 81px;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoints(ipad-pro) { @include flex-direction(row); }
+
+        li { 
+          padding: 14px 0; 
+          &.active a { color: $primary-color;}
+        }
+
+        a { 
+          padding: 0 14px;
+          color: #9a9a9a;
+          text-transform: $uppercase;
+          font-size: 13px; 
+          font-weight: 700;
+
+          &:hover { @include hover-effects() { color: $primary-color; }}
+        }
+      }
+    }
+
+    .right-content { 
+      flex: 3;
+
+      @at-root
+      .images-gallery {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        
+        li { 
+          min-height: 310px;
+          margin: 0 3.9% 30px 0;
+          flex-basis: 30.73%;
+
+          &:nth-child(3n) { margin-right: 0; }
+        }
+      }
+    }
+  }
+}
