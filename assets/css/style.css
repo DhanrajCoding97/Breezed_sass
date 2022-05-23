@@ -100,6 +100,36 @@
   text-indent: 0;
 }
 
+.about-us-cta {
+  margin-top: 60px;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: #5fb759;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.about-us-cta::after {
+  content: "\f178";
+  padding-left: 5px;
+  color: #fff;
+  font-family: "fontAwesome";
+  font-size: 12px;
+  float: right;
+  text-indent: 0;
+}
+@media screen and (min-width: 768px) {
+  .about-us-cta:hover {
+    background-color: #000;
+    color: #5fb759;
+    -webkit-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+  }
+}
+
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -467,6 +497,66 @@ h1 a {
   position: absolute;
   bottom: 2px;
   left: 48%;
+}
+
+.about-us {
+  padding-top: 120px;
+}
+.about-us .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 5px solid #f7f7f7;
+}
+@media only screen and (max-width: 1024px) {
+  .about-us .wrapper {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.about-us .wrapper > * {
+  flex: 1;
+}
+.qualities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.qualities li {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .qualities li {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+.qualities li::before {
+  content: url("assets/images/service-item-01.png");
+}
+
+.quality-txt {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-us-content {
+  margin-bottom: 27px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-us-content:first-of-type {
+  margin-top: 47px;
 }
 
 /*# sourceMappingURL=style.css.map */

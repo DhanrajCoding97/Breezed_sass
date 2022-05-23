@@ -57,3 +57,29 @@
     }
   }
 }
+
+//about-us-cta 
+.about-us-cta {
+  margin-top: 60px;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: $primary-color;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  &::after { 
+    @include font-icons("\f178", $white, 12px) {
+      padding-left: 5px;
+    };
+  }
+
+  &:hover { 
+    @include hover-effects() {
+      background-color: $black;
+      color: $primary-color;
+    }
+  }
+}
