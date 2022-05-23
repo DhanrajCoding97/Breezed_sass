@@ -1,0 +1,44 @@
+.newsletter {
+  padding: 80px 0;
+  background: url('/assets/images/slide-02.jpg');
+  .wrapper {
+    @at-root
+    .section-content {
+      text-align: center;
+    }
+
+    .subscribe-form { 
+      @include flexbox();
+      @include justify-content(center);
+
+      @include breakpoints(tablet) { 
+        flex-direction: column;
+        align-items: center;
+       }
+
+      .formgroup { 
+        flex-basis: 43%;
+
+        @include breakpoints(tablet) { width: 60%; }
+
+        @at-root 
+        .email-field { 
+          padding: 0px 20px;
+          width: 100%;
+          height: 38px;
+          border: 1px solid $white;
+          border-radius: 19px;
+          outline: none;
+          background-color: transparent;
+          color: $white;
+          font-size: 13px;
+        }
+
+        @include placeholder() { 
+          color: $white;
+          text-transform: capitalize;
+        };
+      }
+    }
+  }
+}

@@ -53,6 +53,30 @@ li {
   text-transform: uppercase;
 }
 
+.section-title{
+  color: $white;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: $uppercase;
+}
+
+.section-subtitle {
+  margin-top: 20px;
+  font-size: 32px;
+  color: $white;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.section-txt {
+  margin: 40px 0;
+  color: $white;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.7;
+}
+
 //body overflow hidden hamburger menu open
 .hidden {
   width: 100%;

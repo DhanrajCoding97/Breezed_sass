@@ -83,3 +83,46 @@
     }
   }
 }
+
+.learn-more-cta {
+  margin-top: 15px;
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &::after { 
+    @include font-icons("\f178", $black, 12px) { padding-left: 5px; };
+  }
+
+  &:hover::after { @include hover-effects() { color: $primary-color; }}
+
+  &:hover { @include hover-effects() { color: $primary-color; } }
+}
+
+.subscribe-btn {
+  padding: 10px 25px;
+  margin-left: 2.8%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: $white;
+  color: #5fb759;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover { 
+    @include hover-effects() {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  @include breakpoints(tablet) { 
+    margin-top: 20px;
+    width: 40%; 
+  }
+}

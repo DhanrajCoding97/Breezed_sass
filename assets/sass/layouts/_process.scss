@@ -1,0 +1,45 @@
+.process {
+  padding: 80px 0 118px;
+
+  .wrapper {
+    @at-root
+    .process-details {
+      @include flexbox();
+
+      @include breakpoints(ipad-pro) { @include flex-direction(column); }
+
+      @at-root
+      .process-item {
+        @include flexbox();
+        @include flex-basis(33.3%);
+
+        @include breakpoints(ipad-pro) { padding-bottom: 15px; }
+
+        @at-root
+        .process-figure { 
+          margin-right: 8%;
+          img { 
+            width: inherit;
+            height: auto;
+          }
+        }
+      }
+
+      @at-root
+      .process-title { 
+        color: $black;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.25px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .process-details {
+      color: $txt-color;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+}
