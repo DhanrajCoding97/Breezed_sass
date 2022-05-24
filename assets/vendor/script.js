@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
   //slick slider
-  function videoSlider(sliderHolder, $dots, $arrows, $slideToShow, $slidesToScroll) {
+  function slickSlider(sliderHolder, $dots, $arrows, $slideToShow, $slidesToScroll) {
     sliderHolder.slick({
       dots: $dots,
       arrows: $arrows,
@@ -22,8 +22,19 @@ $(document).ready(function() {
       speed: 400,
       slidesToShow: $slideToShow,
       slidesToScroll: $slidesToScroll,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false
+          }
+        }
+      ]
     });
   }
 
-  videoSlider($('.banner-slider'), false, true, 1, 1);  
+  slickSlider($('.banner-slider'), false, true, 1, 1);  
+  slickSlider($('.team-cards'), true, false, 3, 3);  
 });
