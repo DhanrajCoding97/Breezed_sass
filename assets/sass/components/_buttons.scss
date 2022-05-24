@@ -106,17 +106,10 @@
 }
 
 .subscribe-btn {
-  padding: 10px 25px;
-  margin-left: 2.8%;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  background-color: $white;
-  color: #5fb759;
-  font-size: 13px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  @include btn($white, $primary-color) {
+    padding: 10px 25px;
+    margin-left: 2.8%;
+  }
 
   &:hover { 
     @include hover-effects() {
@@ -129,4 +122,17 @@
     margin-top: 20px;
     width: 40%; 
   }
+}
+
+.msg-btn {
+  @include btn($primary-color, $white) { padding: 13px 25px; }
+
+  &:hover { 
+    @include hover-effects() { 
+      background-color: $black;
+      color: $primary-color;
+    }
+  }
+
+  @include breakpoints(ipad-mini) { margin: 0 auto; }
 }

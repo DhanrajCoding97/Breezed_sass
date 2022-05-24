@@ -128,6 +128,21 @@
   @content;
 }
 
+//mixin for btn
+@mixin btn($bg-color, $color) {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: $bg-color;
+  color: $color;
+  font-size: 13px;
+  font-family: 'Raleway', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @content;
+}
+
 // mixin to give hover effect only on desktops
 @mixin  hover-effects() {
   @media screen and (min-width: 768px) {

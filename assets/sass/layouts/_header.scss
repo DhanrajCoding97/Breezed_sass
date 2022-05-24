@@ -46,6 +46,7 @@ header {
 
       @at-root
       .navlinks {
+        height: 100%;
         @include flexbox();
         @include justify-content(flex-end);
         @include align-items(center);
@@ -70,6 +71,8 @@ header {
           font-size: 13px;
           text-transform: $uppercase;
 
+          @include breakpoints(ipad-mini) { font-size: 12px; }
+
           &:hover { @include hover-effects() { opacity: .5;}}
         }
 
@@ -91,6 +94,7 @@ header {
             @include hover-effects() {  
               display: block;
               position: absolute;
+              top: 15px;
               left: 0;
             }
               
