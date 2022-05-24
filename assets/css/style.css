@@ -492,7 +492,7 @@ h1 a {
     min-height: 100vh;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 2;
     left: 100%;
     -webkit-transition: 0.4s ease-in;
     -o-transition: 0.4s ease-in;
@@ -521,7 +521,6 @@ h1 a {
 @media only screen and (max-width: 768px) {
   .navlinks {
     min-height: 100vh;
-    background-color: #000;
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
     -moz-box-direction: normal;
@@ -532,6 +531,7 @@ h1 a {
     -ms-flex-pack: distribute;
     -webkit-justify-content: space-around;
     justify-content: space-around;
+    background-color: #000;
   }
 }
 .navlinks li {
@@ -659,6 +659,72 @@ h1 a {
   position: absolute;
   bottom: 2px;
   left: 48%;
+}
+
+.banner .wrapper {
+  width: 100%;
+  position: relative;
+}
+.slider-item {
+  display: none;
+  height: 95vh;
+  position: relative;
+}
+.slider-item:first-child {
+  display: block;
+}
+.banner-figure {
+  height: 100%;
+}
+
+.banner-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-title {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.banner-subtitle {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
+}
+
+.go-down-btn-container {
+  position: absolute;
+  bottom: -25px;
+  left: 48%;
+}
+
+.slick-prev {
+  left: 3px;
+  z-index: 1;
+}
+.slick-prev.active {
+  z-index: 0;
+}
+
+.banner .wrapper .slick-next {
+  right: 31px;
+}
+.banner .slick-prev::before {
+  content: url(/assets/images/prev.png);
+}
+.banner .slick-next::before {
+  content: url(/assets/images/next.png);
 }
 
 .about-us {
