@@ -57,7 +57,10 @@
           margin: 0 3.9% 30px 0;
           flex-basis: 30.73%;
 
-          @include breakpoints(tablet) { min-height: unset;}
+          @include breakpoints(tablet) { 
+            min-height: unset;
+            margin-right: 0;
+          }
 
           &:nth-child(3n) { margin-right: 0; }
         }

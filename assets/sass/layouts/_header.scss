@@ -77,7 +77,9 @@ header {
 
           @include breakpoints(ipad-mini) { font-size: 12px; }
 
-          &:hover { @include hover-effects() { opacity: .5;}}
+          &:hover { @include hover-effects() { opacity: .5; } }
+
+          &.active { opacity: .5; }
         }
 
         @at-root 
@@ -88,25 +90,31 @@ header {
             @include font-icons($white, 10px) {
               content: "\f107";
               position: absolute;
-              top: 25%;
+              top: 5px;
               right: .8%;
               cursor: pointer;
             }
           }
 
-          &:hover > .dropdown-menu {
-
+          &:hover .dropdown-menu{
             @include hover-effects() {  
               display: block;
               position: absolute;
               top: 15px;
               left: 0;
             }
-              
+          }
+            
+          @at-root
+          .dropdown-menu {
             a { 
               padding: 12px 16px;
               text-decoration: none;
               display: block;
+            }
+            @include breakpoints(tablet) {
+              position: unset;
+              li { display: block; }
             }
           }
         }
