@@ -19,7 +19,7 @@
       .formgroup { 
         flex-basis: 43%;
 
-        @include breakpoints(tablet) { width: 60%; }
+        @include breakpoints(tablet) { width: 90%; }
 
         @at-root 
         .email-field { 

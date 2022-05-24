@@ -1,5 +1,7 @@
 .contact-us {
   padding: 117px 0 113px;
+  @include breakpoints(ipad-mini) { padding: 80px 0;}
+  // @include
   
   .wrapper {
     background: url('/assets/images/dotted-map-bg.png') center / cover no-repeat;

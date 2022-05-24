@@ -98,8 +98,7 @@
 @mixin font-content($content) { content: $content; }
 
 //icons
-@mixin font-icons($content, $color, $size) {
-  content: $content;
+@mixin font-icons($color, $size) {
   @content;
   color: $color;
   font-family: "fontAwesome";
@@ -108,10 +107,11 @@
   text-indent: 0;
 }
 
-@mixin icon-box($width, $height) {
+@mixin icon-box($width, $height, $bg-color) {
   width: $width;
   height: $height;
   border-radius: 50px;
+  background-color: $bg-color;
   text-align: center;
 }
 

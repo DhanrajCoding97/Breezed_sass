@@ -45,17 +45,19 @@
 
 //go down btn
 .go-down-btn {
-  @include icon-box(60px, 60px);
+  @include icon-box(60px, 60px, $primary-color);
   display: inline-block;
-  background-color: $primary-color;
   color: $white;
   text-indent: $indent;
 
   &:hover { @include hover-effects() { background-color: $black;} }
 
   &::after {
-    @include font-icons("\f063", $white, 20px) {
-      padding: 20px 38% 0 0;
+    @include font-icons($white, 20px) {
+      content: "\f063";
+      height: 100%;
+      width: 100%;
+      padding-top: 20px;
     }
   }
 
@@ -75,7 +77,8 @@
   letter-spacing: 1px;
 
   &::after { 
-    @include font-icons("\f178", $white, 12px) {
+    @include font-icons($white, 12px) {
+      content: "\f178";
       padding-left: 5px;
     };
   }
@@ -97,7 +100,10 @@
   text-transform: uppercase;
 
   &::after { 
-    @include font-icons("\f178", $black, 12px) { padding-left: 5px; };
+    @include font-icons($black, 12px) { 
+      content: "\f178";
+      padding-left: 5px; 
+    };
   }
 
   &:hover::after { @include hover-effects() { color: $primary-color; }}
@@ -119,8 +125,8 @@
   }
 
   @include breakpoints(tablet) { 
-    margin-top: 20px;
-    width: 40%; 
+    width: auto; 
+    margin: 20px auto;
   }
 }
 

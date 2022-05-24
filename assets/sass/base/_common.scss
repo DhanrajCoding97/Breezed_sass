@@ -44,6 +44,8 @@ li {
   font-size: 32px;
   font-weight: 800;
   letter-spacing: 1px;
+
+  @include breakpoints(tablet) { font-size: 28px; }
 }
 
 .process-title {
