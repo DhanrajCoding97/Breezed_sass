@@ -1,58 +1,6 @@
 .banner {
   .wrapper { 
     width: 100%;
-    
-    @at-root
-    .slider-item {
-      display: none;
-      &:first-child { display: block;}
-      height: 95vh;
-      position: relative;
-
-      @at-root 
-      .banner-figure { height: 100%; }
-
-      @at-root 
-      .banner-content { 
-        width: 100%;
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        @at-root
-        .banner-title {
-          margin-bottom: 25px;
-          color: $white;
-          font-size: 16px;
-          font-weight: 600;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-        } 
-
-        @at-root
-        .banner-subtitle {
-          margin-bottom: 50px;
-          color: $white;
-          font-size: 36px;
-          font-weight: 200;
-          letter-spacing: 2.5px;
-          text-transform: capitalize;
-        }
-      }
-    }
-
-    @at-root
-    .go-down-btn-container {
-      position: absolute;
-      bottom: 2px;
-      left: 48%;
-    }
-  }
-}.banner {
-  .wrapper { 
-    width: 100%;
     position: relative;
     
     @at-root
@@ -100,7 +48,8 @@
     .go-down-btn-container {
       position: absolute;
       bottom: -25px;
-      left: 48%;
+      left: 50%;
+      @include translate(-50%, 0)
     }
 
     // slick slider styling
@@ -121,5 +70,47 @@
   }
   .slick-next::before {
     content: url(/assets/images/next.png);
+  }
+}
+
+// digital team 
+.digital-team {
+  padding: 25px 0 123px;
+  background: url('/assets/images/slide-03.jpg');
+
+  .wrapper {
+    .section-subtitle { 
+      padding-bottom: 64px;
+      text-transform: lowercase
+    }
+
+    @at-root
+    .slick-slider {
+      margin: 0 -15px;
+    }
+
+    @at-root
+    .slick-slide {
+      // padding:10px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    @at-root
+    .slick-dots { bottom: -64px; }
+
+    @at-root
+    .slick-dots li button:before {
+      color: $white;
+      opacity: 1;
+      transform: scale(1.5);  
+    }
+
+    @at-root
+    .slick-dots li.slick-active button:before {
+      color: $white;
+      opacity: 1;
+      transform: scale(2);
+    }
   }
 }
