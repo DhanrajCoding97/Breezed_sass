@@ -10,8 +10,9 @@
 
       @at-root
       .process-item {
+        margin-right: 2.5%;
         @include flexbox();
-        @include flex-basis(33.3%);
+        @include flex-basis(31.66%);
 
         @include breakpoints(ipad-pro) { padding-bottom: 15px; }
 
@@ -23,6 +24,23 @@
             height: auto;
           }
         }
+
+        @at-root
+        .feature-icon {
+          text-indent: $indent;
+          
+          &::before { 
+            content: url('/assets/images/features-icon-1.png');
+            // margin-right: 5%;  
+            text-indent: 0;
+            float: right;
+          }
+        }
+
+        @at-root 
+        .process-content { margin-left: 6%;}
+        
+        &:nth-child(3n) { margin-right: 0; }
       }
 
       @at-root

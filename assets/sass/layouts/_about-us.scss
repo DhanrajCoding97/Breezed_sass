@@ -18,22 +18,19 @@
         @include align-items(center);
         @include flex-basis(50%);
 
-        &:first-child { 
-          padding-bottom: 15px;
-        }
+        &:first-child { padding-bottom: 15px; }
         &:nth-child(2){ padding-bottom: 15px}
 
         @include breakpoints(tablet) { 
           @include flex-basis(100%); 
           padding-bottom: 15px;
         }
-        
+
+        &::before { content: url(/assets/images/service-item-01.png); }
       }
     }
 
-    .left-content {
-      .section-subheading { padding-bottom: 41px; }
-    }
+    .left-content { .section-subheading { padding-bottom: 41px; } }
 
     @at-root
     .quality-txt{

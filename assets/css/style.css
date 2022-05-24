@@ -658,6 +658,9 @@ h1 a {
     padding-bottom: 15px;
   }
 }
+.qualities li::before {
+  content: url(/assets/images/service-item-01.png);
+}
 
 .about-us .wrapper .left-content .section-subheading {
   padding-bottom: 41px;
@@ -699,11 +702,12 @@ h1 a {
   }
 }
 .process-item {
+  margin-right: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 33.3%;
-  flex-basis: 33.3%;
+  -ms-flex-preferred-size: 31.66%;
+  flex-basis: 31.66%;
 }
 @media only screen and (max-width: 1024px) {
   .process-item {
@@ -716,6 +720,23 @@ h1 a {
 .process-figure img {
   width: inherit;
   height: auto;
+}
+
+.feature-icon {
+  text-indent: -9999px;
+}
+.feature-icon::before {
+  content: url("/assets/images/features-icon-1.png");
+  text-indent: 0;
+  float: right;
+}
+
+.process-content {
+  margin-left: 6%;
+}
+
+.process-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .process-title {
