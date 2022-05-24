@@ -273,6 +273,7 @@ footer, header, hgroup, menu, nav, section {
 html {
   box-sizing: border-box;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 *,
@@ -520,6 +521,7 @@ h1 a {
 }
 @media only screen and (max-width: 768px) {
   .navlinks {
+    max-height: calc(100% - 50px);
     min-height: 100vh;
     -webkit-box-direction: normal;
     -webkit-box-orient: vertical;
@@ -532,6 +534,7 @@ h1 a {
     -webkit-justify-content: space-around;
     justify-content: space-around;
     background-color: #000;
+    overflow-y: auto;
   }
 }
 .navlinks li {

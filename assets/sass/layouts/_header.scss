@@ -54,10 +54,12 @@ header {
         @include align-items(center);
 
         @include breakpoints(tablet) { 
+          max-height: calc(100% - 50px);
           min-height: 100vh;
           @include flex-direction(column);
           @include justify-content(space-around);
           background-color: $black;
+          overflow-y: auto;
         }
 
         li { 
