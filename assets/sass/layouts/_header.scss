@@ -37,12 +37,14 @@ header {
         min-height: 100vh;
         position: absolute;
         top: 100%;
-        z-index: 1;
+        z-index: 2;
         left: 100%;
         @include transition-effect();
       }
 
-      &.active { left: 0; }
+      &.active { 
+        left: 0; 
+      }
 
       @at-root
       .navlinks {
@@ -53,9 +55,9 @@ header {
 
         @include breakpoints(tablet) { 
           min-height: 100vh;
-          background-color: $black;
           @include flex-direction(column);
           @include justify-content(space-around);
+          background-color: $black;
         }
 
         li { 
