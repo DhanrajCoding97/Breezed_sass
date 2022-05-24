@@ -48,7 +48,8 @@
     .go-down-btn-container {
       position: absolute;
       bottom: -25px;
-      left: 48%;
+      left: 50%;
+      @include translate(-50%, 0)
     }
 
     // slick slider styling

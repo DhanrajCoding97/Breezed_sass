@@ -88,8 +88,10 @@
   -webkit-flex-wrap: $value;
   @if $value == nowrap {
     -ms-flex-wrap: none;
+    flex-wrap: none;
   } @else {
     -ms-flex-wrap: $value;
+    flex-wrap: $value;
   }
   flex-wrap: $value;
 }
