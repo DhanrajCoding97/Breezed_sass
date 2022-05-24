@@ -5,6 +5,10 @@ $(document).ready(function() {
     $('.nav').toggleClass('active');
     $('body').toggleClass('hidden');
     $('.slick-prev').toggleClass('active');
+
+    $('.dropdown').click(function() {
+      $('.dropdown-menu').slideToggle();
+    })
   })
 
   //go down btn
