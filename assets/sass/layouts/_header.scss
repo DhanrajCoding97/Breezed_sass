@@ -81,7 +81,8 @@ header {
           position: relative; 
           
           &::after { 
-            @include font-icons("\f107", $white, 10px) {
+            @include font-icons($white, 10px) {
+              content: "\f107";
               position: absolute;
               top: 25%;
               right: .8%;
@@ -114,7 +115,8 @@ header {
           text-indent: $indent; 
         
           &::after {
-            @include font-icons("\f002", $primary-color, 15px) {
+            @include font-icons($primary-color, 15px) {
+              content: "\f002";
               position: absolute;
               top: 34%;
               right: 34%;

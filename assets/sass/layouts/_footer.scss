@@ -1,0 +1,82 @@
+footer {
+  padding: 80px 0;
+  background-image: $footer-gradient-bg;
+
+  @include breakpoints(ipad-mini) { padding: 50px 0; }
+
+  .wrapper {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @include breakpoints(ipad-mini) { 
+      @include flex-direction(column); 
+      @include justify-content(center);
+    }
+
+    .left-content {
+      flex: 2;
+
+      @at-root 
+      .copyright-txt { 
+        color: $white;
+        font-size: 14px;
+        
+        @include breakpoints(mobile) { 
+          font-size: 12px; 
+          text-align: center;
+        }
+      }
+    }
+
+    .right-content {
+      flex: 1;
+      @include flexbox();
+      @include justify-content(flex-end);
+
+      @include breakpoints(ipad-mini) { 
+        width: 100%; 
+        padding-top: 20px;
+        @include justify-content(center);
+      }
+
+      @include breakpoints(mobile-small) { 
+        @include flex-direction(column); 
+        @include align-items(center);
+      }
+
+      @at-root
+      .follow-us-txt {
+        margin-right: 3.2%;
+        align-self: center;
+        color: $white;
+        text-transform: $uppercase;
+      }
+
+      @at-root
+      .social-links {
+        @include breakpoints(mobile-small) { padding-top: 10px; }
+
+        .facebook-icon::after { @include font-content("\f39e"); }
+        .twitter-icon::after { @include font-content("\f099"); }
+        .linkedin-icon::after { @include font-content("\f0e1"); }
+        .basketball-icon::after { @include font-content("\f434"); }
+        a {
+          @include icon-box(35px, 35px, $white);
+          text-indent: $indent;
+
+          &:hover { @include hover-effects() { background-color: $primary-color; } }
+          &:hover::after { @include hover-effects() { color: $white; } }
+          
+          &::after { 
+            @include font-icons($primary-color, 13px) {
+              height: 100%;
+              width: 100%;
+              padding-top: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
