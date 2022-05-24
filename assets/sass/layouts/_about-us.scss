@@ -2,6 +2,7 @@
   padding-top: 120px;
 
   .wrapper {
+    padding-bottom: 80px;
     @include flexbox();
     border-bottom: 5px solid $border-color;
 
