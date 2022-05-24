@@ -25,7 +25,7 @@
               <li><a href="index.html" title="Home">home</a></li>
               <li><a href="#FIXME" title="About">about</a></li>
               <li><a href="#FIXME" title="Projects">projects</a></li>
-              <li>
+              <li class="dropdown">
                 <ul class="dropdown-menu">
                   <li><a href="#FIXME" title="Link 1">link 1</a></li>
                   <li><a href="#FIXME" title="Link 2">link 2</a></li>
@@ -58,8 +58,8 @@
                   <h2 class="banner-title">integrated marketing media</h2>
                   <h3 class="banner-subtitle">best digital marketing</h3>
                   <div class="banner-buttons">
-                    <a href="#FIXME" class="banner-cta" title="Read More">read more</a>
-                    <a href="#FIXME" class="banner-cta" title="Take Action">Take Action</a>
+                    <a href="#FIXME" class="banner-cta banner-read-more-cta" title="Read More">read more</a>
+                    <a href="#FIXME" class="banner-cta banner-take-action-cta" title="Take Action">Take Action</a>
                   </div>
                 </div>
               </li>
@@ -90,7 +90,9 @@
                 </div>
               </li>
             </ul>
-            <a href="#about-us" class="go-down-btn" title="Go Down">Go Down</a>
+            <div class="go-down-btn-container">
+              <a href="#about-us" class="go-down-btn" title="Go Down">Go Down</a>
+            </div>
           </div>
         </section>
         <!--banner section end-->
@@ -120,23 +122,34 @@
       <!--about us section end-->
       <!--process section start-->
       <div class="process">
-        <ul class="process-details">
-          <li class="process-item">
-            <h4 class="process-title">initial work</h4>
-            <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
-            <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
-          </li>
-          <li class="process-item">
-            <h4 class="process-title">master planning</h4>
-            <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
-            <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
-          </li>
-          <li class="process-item">
-            <h4 class="process-title">smooth execution</h4>
-            <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
-            <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <ul class="process-details">
+            <li class="process-item">
+              <span class="feature-icon">feature</span>
+              <div class="process-content">
+                <h4 class="process-title">initial work</h4>
+                <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
+                <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
+              </div>
+            </li>
+            <li class="process-item">
+              <span class="feature-icon">feature</span>
+              <div class="process-content">
+                <h4 class="process-title">master planning</h4>
+                <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
+                <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
+              </div>
+            </li>
+            <li class="process-item">
+              <span class="feature-icon">smooth execution</span>
+              <div class="process-content">
+                <h4 class="process-title">master planning</h4>
+                <p class="process-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita aliquam ex unde architecto obcaecati quaerat vero dignissimos perferendis provident?</p>
+                <a href="#FIXME" class="learn-more-cta" title="Learn More">learn more</a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <!--process section end-->
       <!--newsletter section start-->
