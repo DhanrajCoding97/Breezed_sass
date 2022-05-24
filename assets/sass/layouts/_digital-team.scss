@@ -7,5 +7,34 @@
       padding-bottom: 64px;
       text-transform: lowercase
     }
+
+    @at-root
+    .slick-slider {
+      margin: 0 -15px;
+    }
+
+    @at-root
+    .slick-slide {
+      // padding:10px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    @at-root
+    .slick-dots { bottom: -64px; }
+
+    @at-root
+    .slick-dots li button:before {
+      color: $white;
+      opacity: 1;
+      transform: scale(1.5);  
+    }
+
+    @at-root
+    .slick-dots li.slick-active button:before {
+      color: $white;
+      opacity: 1;
+      transform: scale(2);
+    }
   }
 }
