@@ -50,4 +50,76 @@
       left: 48%;
     }
   }
+}.banner {
+  .wrapper { 
+    width: 100%;
+    position: relative;
+    
+    @at-root
+    .slider-item {
+      display: none;
+      &:first-child { display: block;}
+      height: 95vh;
+      position: relative;
+
+      @at-root 
+      .banner-figure { height: 100%; }
+
+      @at-root 
+      .banner-content { 
+        width: 100%;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @at-root
+        .banner-title {
+          margin-bottom: 25px;
+          color: $white;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        } 
+
+        @at-root
+        .banner-subtitle {
+          margin-bottom: 50px;
+          color: $white;
+          font-size: 36px;
+          font-weight: 200;
+          letter-spacing: 2.5px;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    @at-root
+    .go-down-btn-container {
+      position: absolute;
+      bottom: -25px;
+      left: 48%;
+    }
+
+    // slick slider styling
+    @at-root
+    .slick-prev {
+      left: 3px;
+      z-index: 1;
+      
+      &.active { z-index: 0;}
+    }
+
+    // @at-root
+    .slick-next { right: 31px; }
+  }
+
+  .slick-prev::before {
+    content: url(/assets/images/prev.png);
+  }
+  .slick-next::before {
+    content: url(/assets/images/next.png);
+  }
 }
