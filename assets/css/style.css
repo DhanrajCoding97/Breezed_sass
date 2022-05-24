@@ -1049,6 +1049,30 @@ h1 a {
   padding-bottom: 64px;
   text-transform: lowercase;
 }
+.slick-slider {
+  margin: 0 -15px;
+}
+
+.slick-slide {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.slick-dots {
+  bottom: -64px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+  transform: scale(2);
+}
 
 .contact-us {
   padding: 117px 0 113px;
