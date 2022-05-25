@@ -41,4 +41,22 @@ $(document).ready(function() {
 
   slickSlider($('.banner-slider'), false, true, 1, 1);  
   slickSlider($('.team-cards'), true, false, 3, 3);  
+
+  // tab filter 
+  $('.filter-image-links li').click(function() {
+    var buttonData = $(this).data('img'),
+      images  = $('.images-gallery li');
+
+    images.each(function() {
+      var imageData = $(this).data('img'),
+        img = this;
+      if(buttonData === 'all') {
+        $(img).fadeIn('500');
+      } else if(buttonData === imageData) {
+        $(img).fadeIn('500');
+      } else {
+        $(img).fadeOut('500');
+      }
+    });
+  });
 });
